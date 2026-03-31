@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Wakeel Mustafa - CV</title>
+<style>
+  @page { margin: 15mm 20mm; size: A4; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #2d2d2d;
+    font-size: 11px;
+    line-height: 1.6;
+    background: #fff;
+  }
+
+  /* === HEADER === */
+  .header {
+    border-bottom: 3px solid #2c5f7c;
+    padding-bottom: 14px;
+    margin-bottom: 16px;
+  }
+  .header-name {
+    font-size: 30px;
+    font-weight: 700;
+    color: #2c5f7c;
+    letter-spacing: 1px;
+  }
+  .header-title {
+    font-size: 13px;
+    color: #e8833a;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+  }
+  .header-details {
+    font-size: 10.5px;
+    color: #555;
+    line-height: 1.8;
+  }
+  .header-details .icon { color: #2c5f7c; font-weight: 600; margin-right: 4px; }
+  .header-details a { color: #2c5f7c; text-decoration: none; }
+  .exp-badge {
+    display: inline-block;
+    background: #2c5f7c;
+    color: #fff;
+    padding: 4px 14px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 6px;
+  }
+
+  /* === SECTIONS === */
+  .section { margin-bottom: 18px; }
+  .section-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #2c5f7c;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid #e8833a;
+  }
+
+  /* === ABOUT ME === */
+  .about-text {
+    font-size: 11px;
+    color: #444;
+    line-height: 1.75;
+    text-align: justify;
+    margin-bottom: 8px;
+  }
+  .highlight-box {
+    background: #f0f6f9;
+    border-left: 4px solid #2c5f7c;
+    padding: 10px 14px;
+    margin: 10px 0;
+    font-size: 10.5px;
+    color: #333;
+    line-height: 1.7;
+  }
+
+  /* === SKILLS === */
+  .skills-grid {
+    display: table;
+    width: 100%;
+    margin-top: 6px;
+  }
+  .skills-col {
+    display: table-cell;
+    width: 50%;
+    vertical-align: top;
+    padding-right: 15px;
+  }
+  .skill-item {
+    margin-bottom: 6px;
+  }
+  .skill-label {
+    font-size: 10.5px;
+    color: #333;
+    font-weight: 500;
+    margin-bottom: 2px;
+  }
+  .skill-bar-outer {
+    width: 100%;
+    height: 7px;
+    background: #e8e8e8;
+    border-radius: 4px;
+  }
+  .skill-bar-inner {
+    height: 7px;
+    border-radius: 4px;
+  }
+  .bar-expert { background: #2c5f7c; width: 100%; }
+  .bar-advanced { background: #e8833a; width: 80%; }
+  .bar-intermediate { background: #5ea88e; width: 60%; }
+
+  /* === PROJECTS === */
+  .project-block {
+    margin-bottom: 14px;
+    padding-bottom: 12px;
+    border-bottom: 1px dashed #ddd;
+  }
+  .project-block:last-child { border-bottom: none; }
+  .project-name {
+    font-size: 13px;
+    font-weight: 700;
+    color: #2c5f7c;
+    margin-bottom: 4px;
+  }
+  .project-desc {
+    font-size: 10.5px;
+    color: #555;
+    line-height: 1.65;
+    text-align: justify;
+    margin-bottom: 6px;
+  }
+  .project-tech {
+    margin-bottom: 5px;
+  }
+  .tech-label {
+    font-size: 9.5px;
+    font-weight: 700;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .tech-tag {
+    display: inline-block;
+    background: #f0f6f9;
+    color: #2c5f7c;
+    border: 1px solid #c5dce8;
+    padding: 1px 8px;
+    border-radius: 12px;
+    font-size: 9px;
+    font-weight: 500;
+    margin-right: 3px;
+  }
+  .role-badge {
+    display: inline-block;
+    background: #e8833a;
+    color: #fff;
+    padding: 1px 10px;
+    border-radius: 12px;
+    font-size: 9px;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  .resp-list {
+    list-style: none;
+    padding-left: 0;
+  }
+  .resp-list li {
+    font-size: 10px;
+    color: #555;
+    padding: 1.5px 0 1.5px 16px;
+    position: relative;
+  }
+  .resp-list li::before {
+    content: "";
+    position: absolute;
+    left: 3px;
+    top: 7px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #e8833a;
+  }
+
+  /* === EDUCATION === */
+  .edu-block {
+    background: #f0f6f9;
+    padding: 10px 14px;
+    border-left: 4px solid #2c5f7c;
+    border-radius: 0 4px 4px 0;
+  }
+  .edu-degree {
+    font-weight: 700;
+    font-size: 12px;
+    color: #2c5f7c;
+  }
+  .edu-school {
+    font-size: 11px;
+    color: #555;
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="header-name">Wakeel Mustafa</div>
+  <div class="header-title">Senior Software Engineer</div>
+  <table style="width:100%;"><tr>
+    <td style="vertical-align:top; width:60%;">
+      <div class="header-details">
+        <span class="icon">&#9993;</span> wakeelmustafa999@gmail.com<br>
+        <span class="icon">&#9742;</span> +92 323 7042971<br>
+        <span class="icon">&#9741;</span> <a href="https://www.linkedin.com/in/muhammad-wakeel-mustafa-490a87212/">linkedin.com/in/muhammad-wakeel-mustafa-490a87212</a><br>
+        <span class="icon">&#9998;</span> <a href="https://github.com/WakeelMustafa">github.com/WakeelMustafa</a>
+      </div>
+    </td>
+    <td style="vertical-align:top; text-align:right;">
+      <div class="exp-badge">5+ Years of Experience</div>
+    </td>
+  </tr></table>
+</div>
+
+<!-- CAREER PROFILE -->
+<div class="section">
+  <div class="section-title">Career Profile</div>
+  <p class="about-text">
+    A driven and detail-oriented Senior Software Engineer with over five years of hands-on experience in designing, developing, and deploying scalable web applications. My core expertise lies in Ruby on Rails, where I have built everything from MVPs to enterprise-grade platforms across diverse industries including SaaS, E-commerce, Ads Management, Education, Fitness, and Recruitment. I am equally passionate about the transformative potential of Artificial Intelligence — with practical experience integrating OpenAI APIs, large language models (LLMs), and intelligent automation pipelines into production applications.
+  </p>
+
+  <div class="highlight-box">
+    <strong style="color:#2c5f7c;">What I Bring to the Table:</strong><br>
+    Deep full-stack development skills combined with a forward-thinking approach to AI-powered solutions. Whether it's building RESTful APIs, architecting microservices, implementing real-time communication with Twilio, processing payments via Stripe/PayPal, or integrating AI-driven features like smart chatbots, automated workflows, and recommendation engines — I deliver production-ready code that scales.
+  </div>
+
+  <p class="about-text">
+    I have had the privilege of working with both established enterprises and fast-moving startups, which has sharpened my ability to adapt quickly, communicate effectively across teams, and consistently deliver high-quality results under tight deadlines. My passion for emerging technologies — including Generative AI, natural language processing, and machine learning — drives me to continuously evolve and bring innovative solutions to every project I work on.
+  </p>
+</div>
+
+<!-- EDUCATION -->
+<div class="section">
+  <div class="section-title">Education</div>
+  <div class="edu-block">
+    <div class="edu-degree">Bachelors in Software Engineering</div>
+    <div class="edu-school">COMSATS University Islamabad</div>
+  </div>
+</div>
+
+<!-- CORE COMPETENCIES -->
+<div class="section">
+  <div class="section-title">Technical Expertise</div>
+  <div class="skills-grid">
+    <div class="skills-col">
+      <div class="skill-item">
+        <div class="skill-label">Ruby on Rails</div>
+        <div class="skill-bar-outer"><div class="skill-bar-inner bar-expert"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label">RSpec (Unit Testing)</div>
+        <div class="skill-bar-outer"><div class="skill-bar-inner bar-expert"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label">RESTful API Design</div>
+        <div class="skill-bar-outer"><div class="skill-bar-inner bar-expert"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label">Sidekiq (Background Jobs)</div>
+        <div class="skill-bar-outer"><div class="skill-bar-inner bar-advanced"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label">Twilio (SMS / Calling)</div>
+        <div class="skill-bar-outer"><div class="skill-bar-inner bar-advanced"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label">Stripe / PayPal</div>
+        <div class="skill-bar-outer"><div class="skill-bar-inner bar-advanced"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label">Mailgun / Mailchimp / Sendgrid</div>
+        <div class="skill-bar-outer"><div class="skill-bar-inner bar-advanced"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label">OpenAI / LLM API Integration</div>
+        <div class="skill-bar-outer"><div class="skill-bar-inner bar-advanced"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label">Git / GitHub / Version Control</div>
+        <div class="skill-bar-outer"><div class="skill-bar-inner bar-advanced"></div></div>
+      </div>
+    </div>
+    <div class="skills-col">
+      <div class="skill-item">
+        <div class="skill-label">ReactJS / Redux</div>
+        <div class="skill-bar-outer"><div class="skill-bar-inner bar-advanced"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label">AWS & Heroku (Cloud Deployment)</div>
+        <div class="skill-bar-outer"><div class="skill-bar-inner bar-advanced"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label">GraphQL</div>
+        <div class="skill-bar-outer"><div class="skill-bar-inner bar-advanced"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label">PostgreSQL / MySQL</div>
+        <div class="skill-bar-outer"><div class="skill-bar-inner bar-advanced"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label">3rd Party API Integrations</div>
+        <div class="skill-bar-outer"><div class="skill-bar-inner bar-advanced"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label">Docker / CI/CD Pipelines</div>
+        <div class="skill-bar-outer"><div class="skill-bar-inner bar-advanced"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label">Agile / Scrum Methodology</div>
+        <div class="skill-bar-outer"><div class="skill-bar-inner bar-advanced"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label">Vue JS</div>
+        <div class="skill-bar-outer"><div class="skill-bar-inner bar-intermediate"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label">Node JS / Python</div>
+        <div class="skill-bar-outer"><div class="skill-bar-inner bar-intermediate"></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PROJECT EXPERIENCE -->
+<div class="section">
+  <div class="section-title">Project Experience</div>
+
+  <!-- Shoppybait -->
+  <div class="project-block">
+    <div class="project-name">Shoppybait</div>
+    <div class="project-desc">
+      Shoppybait is a community-driven coupon, event, and place discovery platform built for the Ghanaian market (coupons.com.gh). It serves as a marketplace connecting consumers with local businesses through curated deals, promotions, and events. The platform features a robust reward and gamification system where users earn points through daily logins, referrals, and coupon redemptions — tracked via QR code scanning. Business owners can create and manage their promotions, monitor coupon usage analytics, and reach a targeted audience. Social features including ratings, reviews, threaded comments, and voting drive community engagement and trust.
+    </div>
+    <div class="project-tech">
+      <span class="tech-label">Tech Stack: </span>
+      <span class="tech-tag">Ruby on Rails 5.1.6</span>
+      <span class="tech-tag">PostgreSQL</span>
+      <span class="tech-tag">AWS</span>
+      <span class="tech-tag">Semantic UI</span>
+      <span class="tech-tag">Bootstrap</span>
+      <span class="tech-tag">jQuery</span>
+      <span class="tech-tag">Leaflet Maps</span>
+      <span class="tech-tag">ActiveAdmin</span>
+      <span class="tech-tag">SendGrid</span>
+      <span class="tech-tag">Delayed Job</span>
+    </div>
+    <span class="role-badge">Senior Software Engineer</span>
+    <ul class="resp-list">
+      <li>Developed and extended core platform features including the rewards/points engine, QR code coupon scanning system, and user referral program</li>
+      <li>Built multi-role authentication (Users, Owners, Admins) with OAuth social login (Facebook, Twitter)</li>
+      <li>Implemented geolocation-based discovery, full-text search, and SEO optimizations (sitemaps, meta tags, FriendlyID slugs)</li>
+      <li>Maintained and supported existing codebase in an Agile, cross-functional team environment</li>
+    </ul>
+  </div>
+
+  <!-- Ecommerce Platform -->
+  <div class="project-block">
+    <div class="project-name">Ecommerce Platform</div>
+    <div class="project-desc">
+      Developed a full-featured ecommerce platform with product management, shopping cart, order processing, and secure payment integration. The platform includes advanced search, coupon/discount systems, role-based authorization, PDF invoice generation, and a comprehensive RESTful API with Swagger documentation.
+    </div>
+    <div class="project-tech">
+      <span class="tech-label">Tech Stack: </span>
+      <span class="tech-tag">Ruby 3.2.2</span>
+      <span class="tech-tag">Rails 6.1</span>
+      <span class="tech-tag">PostgreSQL</span>
+      <span class="tech-tag">Redis</span>
+      <span class="tech-tag">Sidekiq</span>
+      <span class="tech-tag">Stripe</span>
+      <span class="tech-tag">Devise</span>
+      <span class="tech-tag">CanCanCan</span>
+      <span class="tech-tag">RSpec</span>
+      <span class="tech-tag">Swagger</span>
+    </div>
+    <span class="role-badge">Senior Software Engineer</span>
+    <ul class="resp-list">
+      <li>Integrated Stripe payment gateway for secure online transactions</li>
+      <li>Implemented full-text search using Thinking Sphinx and advanced filtering with Ransack</li>
+      <li>Built coupon/discount system for promotional offers</li>
+      <li>Configured Redis + Sidekiq for background job processing and scheduled tasks (sidekiq-cron, sidekiq-scheduler)</li>
+      <li>Added role-based authorization using CanCanCan gem</li>
+      <li>Implemented PDF generation (invoices/reports) using WickedPDF</li>
+      <li>Built RESTful API with Swagger documentation using rswag</li>
+      <li>Wrote comprehensive test suite using RSpec, FactoryBot, and SimpleCov for code coverage</li>
+      <li>Implemented pagination with WillPaginate and CSV export functionality</li>
+    </ul>
+  </div>
+
+  <!-- SEAL Properties -->
+  <div class="project-block">
+    <div class="project-name">SEAL Properties</div>
+    <div class="project-desc">
+      Developed and supported a real estate platform focused on property listings, lead management, and agent workflows, enabling faster property discovery and smoother inquiry handling for buyers and sellers.
+    </div>
+    <div class="project-tech">
+      <span class="tech-label">Tech Stack: </span>
+      <span class="tech-tag">Ruby on Rails</span>
+      <span class="tech-tag">PostgreSQL</span>
+      <span class="tech-tag">Redis</span>
+      <span class="tech-tag">Sidekiq</span>
+      <span class="tech-tag">Bootstrap</span>
+      <span class="tech-tag">JavaScript</span>
+    </div>
+    <span class="role-badge">Senior Software Engineer</span>
+    <ul class="resp-list">
+      <li>Implemented core property listing and search flows with filters for location, price, and property type</li>
+      <li>Built lead and inquiry handling workflows for agents with status-based tracking</li>
+      <li>Developed admin tools for content moderation, property approvals, and user management</li>
+      <li>Optimized performance and background processing for notifications and scheduled tasks</li>
+    </ul>
+  </div>
+
+  <!-- Sports Broadcast Reservation Platform -->
+  <div class="project-block">
+    <div class="project-name">Sports Broadcast Reservation Platform</div>
+    <div class="project-desc">
+      Developed a full-featured sports broadcast reservation platform with broadcast management, ticketing system, and user reservation tracking. The platform supports role-based access control, sports interest selection, automatic ticket generation, and a complete admin dashboard for managing broadcasts, sports, and users.
+    </div>
+    <div class="project-tech">
+      <span class="tech-label">Tech Stack: </span>
+      <span class="tech-tag">Ruby 3.2.1</span>
+      <span class="tech-tag">Rails 7.0</span>
+      <span class="tech-tag">PostgreSQL</span>
+      <span class="tech-tag">Redis</span>
+      <span class="tech-tag">Sidekiq</span>
+      <span class="tech-tag">Devise</span>
+      <span class="tech-tag">Active Storage</span>
+      <span class="tech-tag">Webpacker</span>
+      <span class="tech-tag">Tailwind CSS</span>
+    </div>
+    <span class="role-badge">Senior Software Engineer</span>
+    <ul class="resp-list">
+      <li>Implemented user registration and authentication using Devise with custom validations (password strength, country selection, contact details)</li>
+      <li>Built role-based access control (Admin/User) with admin dashboard for managing users, broadcasts, and sports inventory</li>
+      <li>Designed sports interest system allowing users to select preferred sports during registration with many-to-many relationships</li>
+      <li>Integrated Active Storage for broadcast thumbnail image management with image processing support</li>
+      <li>Implemented automatic ticket generation upon reservation with uniqueness constraints (one ticket per user per broadcast)</li>
+      <li>Configured Redis + Sidekiq for background job processing support</li>
+      <li>Built admin panel with full CRUD operations for broadcasts, sports, and user account management</li>
+      <li>Integrated JIRA engine for project/issue tracking with OAuth2 authentication</li>
+      <li>Wrote test suite using Rails Minitest, Capybara, and Selenium WebDriver for system testing</li>
+    </ul>
+  </div>
+
+  <!-- Paint Dash -->
+  <div class="project-block">
+    <div class="project-name">Paint Dash</div>
+    <div class="project-desc">
+      Developed a full-featured paint products e-commerce platform with product catalog management, shopping cart, and complete order processing pipeline. The platform includes advanced search and filtering, admin dashboard, multiple payment processors, and a comprehensive review system for customer engagement.
+    </div>
+    <div class="project-tech">
+      <span class="tech-label">Tech Stack: </span>
+      <span class="tech-tag">Ruby 2.7.3</span>
+      <span class="tech-tag">Rails 6.0</span>
+      <span class="tech-tag">SQLite3</span>
+      <span class="tech-tag">Redis</span>
+      <span class="tech-tag">Sidekiq</span>
+      <span class="tech-tag">Stripe</span>
+      <span class="tech-tag">Devise</span>
+      <span class="tech-tag">Rolify</span>
+      <span class="tech-tag">Pundit</span>
+      <span class="tech-tag">Ransack</span>
+      <span class="tech-tag">Administrate</span>
+      <span class="tech-tag">Bootstrap 5.2</span>
+    </div>
+    <span class="role-badge">Senior Software Engineer</span>
+    <ul class="resp-list">
+      <li>Integrated Stripe payment gateway with webhook handling for secure online transactions and automated order status updates</li>
+      <li>Implemented advanced product search and filtering using Ransack with JSON autocomplete API</li>
+      <li>Built admin dashboard using Administrate gem for managing products, categories, and orders</li>
+      <li>Configured Redis + Sidekiq for background job processing</li>
+      <li>Added role-based authorization using Rolify and Pundit gems</li>
+      <li>Implemented PDF invoice/receipt generation using Receipts gem</li>
+      <li>Supported multiple payment processors (Stripe, Braintree, Paddle) via Pay gem</li>
+      <li>Built product review/comment system for customer engagement</li>
+      <li>Implemented pagination with Pagy and image handling via Active Storage with image processing</li>
+    </ul>
+  </div>
+
+  <!-- ThreadLaunch -->
+  <div class="project-block">
+    <div class="project-name">ThreadLaunch</div>
+    <div class="project-desc">
+      Developed a full-featured crowdfunded fashion e-commerce platform supporting campaign-based pre-orders and direct stock sales with a complete order processing pipeline. The platform features dual-mode ordering, Elasticsearch-powered search, comprehensive admin tools for campaign management, fulfillment tracking, financial reporting, and multi-channel marketing automation.
+    </div>
+    <div class="project-tech">
+      <span class="tech-label">Tech Stack: </span>
+      <span class="tech-tag">Ruby 3.3.4</span>
+      <span class="tech-tag">Rails 7.2.2</span>
+      <span class="tech-tag">PostgreSQL</span>
+      <span class="tech-tag">Redis</span>
+      <span class="tech-tag">Sidekiq</span>
+      <span class="tech-tag">Stripe</span>
+      <span class="tech-tag">Devise</span>
+      <span class="tech-tag">Cancancan</span>
+      <span class="tech-tag">Elasticsearch</span>
+      <span class="tech-tag">Klaviyo</span>
+      <span class="tech-tag">TaxJar</span>
+      <span class="tech-tag">AWS S3</span>
+      <span class="tech-tag">Twilio</span>
+      <span class="tech-tag">Bootstrap 5.3</span>
+    </div>
+    <span class="role-badge">Senior Software Engineer</span>
+    <ul class="resp-list">
+      <li>Integrated Stripe payment gateway with customer management, credit card handling, and automated order charging via background jobs</li>
+      <li>Built a dual-mode order system using AASM state machines managing both crowdfunding campaign orders and ready-to-ship stock fulfillment</li>
+      <li>Implemented product search and filtering using Elasticsearch via Searchkick with campaign and stock-specific search services</li>
+      <li>Developed comprehensive admin dashboard with tools for campaign management, order processing, fulfillment tracking, financial reporting (COGS, sales tax), and analytics</li>
+      <li>Configured Redis + Sidekiq with Sidekiq-Cron for scheduled background job processing including CRM syncs, inventory updates, and automated order charging</li>
+      <li>Integrated Klaviyo CRM for email/SMS marketing with real-time customer profile syncing, LTV tracking, and event-based automation</li>
+      <li>Added role-based authorization using Cancancan with multiple admin roles (super_admin, marketing_admin, fulfillment_admin)</li>
+      <li>Implemented sales tax calculation via TaxJar and Facebook conversion tracking via Facebook Business SDK</li>
+      <li>Built referral program, store credit system, giveaway management, and product review features for customer engagement</li>
+      <li>Integrated multiple fulfillment centers with inventory sync, production cut ticket tracking, and returns/refund management</li>
+      <li>Implemented Devise authentication with OmniAuth social login, magic link (passwordless) sign-in, and SMS notifications via Twilio</li>
+      <li>Handled file storage via AWS S3 with async image processing and pagination</li>
+    </ul>
+  </div>
+
+  <!-- CodeGiant -->
+  <div class="project-block">
+    <div class="project-name">CodeGiant</div>
+    <div class="project-desc">
+      CodeGiant Integration Platform — Architected and built a multi-platform project synchronization system from scratch, designing 3 isolated Rails engines that bridge Jira, GitHub, and GitLab with the CodeGiant.io project management platform.
+    </div>
+    <div class="project-tech">
+      <span class="tech-label">Tech Stack: </span>
+      <span class="tech-tag">Ruby on Rails</span>
+      <span class="tech-tag">GraphQL</span>
+      <span class="tech-tag">OAuth2</span>
+      <span class="tech-tag">Sidekiq</span>
+      <span class="tech-tag">PostgreSQL</span>
+      <span class="tech-tag">Redis</span>
+      <span class="tech-tag">Docker</span>
+      <span class="tech-tag">AWS</span>
+    </div>
+    <span class="role-badge">Senior Software Engineer</span>
+    <ul class="resp-list">
+      <li><strong>Jira Engine:</strong> Implemented OAuth2 authentication (Atlassian), REST API integration with pagination & ADF description parsing, and async background jobs (Sidekiq/Redis) to import projects, issues, comments, and time estimates into CodeGiant via GraphQL mutations</li>
+      <li><strong>GitHub Engine:</strong> Built OAuth2-based repository discovery, issue/comment sync, and automated git clone & push operations using tokenized URLs to migrate repositories directly into CodeGiant</li>
+      <li><strong>GitLab Engine:</strong> Designed parallel architecture to GitHub engine with GitLab GraphQL API integration, repository import, and full issue synchronization including user mapping and field mapping systems</li>
+      <li>Cross-platform user identity mapping across all 3 services</li>
+      <li>Configurable field mapping system (statuses, types, priorities) stored per project</li>
+      <li>Shared GraphQL mutation layer for all write operations to CodeGiant</li>
+      <li>Dockerized with PostgreSQL 14 + Redis 6, deployed on AWS</li>
+    </ul>
+  </div>
+</div>
+
+</body>
+</html>
